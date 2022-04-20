@@ -31,5 +31,6 @@ resource "aws_redshift_parameter_group" "bar" {
 
   tags = {
     name = "krk"
+    reproduce = "test-2"
   }
 }
