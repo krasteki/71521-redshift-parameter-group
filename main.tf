@@ -28,4 +28,8 @@ resource "aws_redshift_parameter_group" "bar" {
     name  = "enable_user_activity_logging"
     value = "true"
   }
+
+  tags = {
+    name = "krk"
+  }
 }
