@@ -49,5 +49,7 @@ resource "aws_redshift_parameter_group" "bar" {
     name = "krk"
     reproduce = "test-2"
     reproduce_count = "krk"
+    reproduce_param = "test"
+    
   }
 }
