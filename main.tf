@@ -11,6 +11,7 @@ provider "aws" {
 }
 
 resource "aws_redshift_parameter_group" "bar" {
+  count = 1
   name   = "parameter-group-test-terraform"
   family = "redshift-1.0"
 
