@@ -16,10 +16,25 @@ resource "aws_redshift_parameter_group" "bar" {
   family = "redshift-1.0"
 
   parameter {
-    name  = "require_ssl"
-    value = "true"
+    name = "wlm_json_configuration"
+    value = jsonencode(
+      [
+        {
+          auto_wlm            = true
+          concurrency_scaling = "auto"
+          name                = "Default queue"
+          query_group         = []
+          user_group          = []
+        },
+        {
+          query_concurrency = 5
+        },
+        {
+          short_query_queue = true
+        },
+      ]
+    )
   }
-
   parameter {
     name  = "query_group"
     value = "example"
