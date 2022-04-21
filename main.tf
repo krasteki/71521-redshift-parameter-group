@@ -50,5 +50,6 @@ resource "aws_redshift_parameter_group" "bar" {
     reproduce = "test-2"
     reproduce_count = "krk"
     another_tag = "krasteki"
+    onemore = "another"
   }
 }
